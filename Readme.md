@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Anna](https://up.htmlacademy.ru/react/3/user/953611).
-* Наставник: `Неизвестно`.
+* Наставник: [Artem Rudov](https://htmlacademy.ru/profile/artrudov).
 
 ---
 
