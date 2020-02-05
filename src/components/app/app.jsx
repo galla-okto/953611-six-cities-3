@@ -6,8 +6,8 @@ const App = (props) => {
   const {countOffers} = props;
 
   return (
-      <Main countOffers={countOffers}/>
+    <Main countOffers={countOffers}/>
   );
-}
+};
 
 export default App;
