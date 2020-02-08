@@ -76,7 +76,7 @@ const Main = ({countOffers, offers}) => {
                     <div className="place-card__info">
                       <div className="place-card__price-wrapper">
                         <div className="place-card__price">
-                          <b className="place-card__price-value">&euro;{offer.price}</b>
+                          <b className="place-card__price-value">&euro;120</b>
                           <span className="place-card__price-text">&#47;&nbsp;night</span>
                         </div>
                         <button className="place-card__bookmark-button button" type="button">
@@ -114,12 +114,7 @@ const Main = ({countOffers, offers}) => {
 Main.propTypes = {
   countOffers: PropTypes.number.isRequired,
 
-  offers: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string.isRequired,
-        price: PropTypes.number.isRequired
-      })
-  ).isRequired,
+  offers: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default Main;

@@ -7,11 +7,11 @@ const Settings = {
 };
 
 const offers = [
-  {title: `Beautiful &amp; luxurious apartment at great location`, price: 120, flat: true, stars: 4, favorite: false},
-  {title: `Wood and stone place`, price: 80, flat: false, stars: 4, favorite: true},
-  {title: `Canal View Prinsengracht`, price: 132, flat: true, stars: 4, favorite: false},
-  {title: `Nice, cozy, warm big bed apartment`, price: 180, flat: true, stars: 5, favorite: false},
-  {title: `Wood and stone place`, price: 80, flat: false, stars: 4, favorite: false}
+  `Beautiful &amp; luxurious apartment at great location`,
+  `Wood and stone place`,
+  `Canal View Prinsengracht`,
+  `Nice, cozy, warm big bed apartment`,
+  `Wood and stone place`
 ];
 
 ReactDOM.render(
