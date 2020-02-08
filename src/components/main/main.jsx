@@ -1,9 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-const Main = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const {countOffers, offers} = props;
-
+const Main = ({countOffers, offers}) => {
   return (
     <React.Fragment>
       <main className="page__main page__main--index">
@@ -66,7 +64,7 @@ const Main = (props) => {
               </form>
               <div className="cities__places-list places__list tabs__content">
                 {offers.map((offer, index) => (
-                  <article className="cities__place-card place-card">
+                  <article className="cities__place-card place-card" key={index}>
                     <div className="place-card__mark">
                       <span>Premium</span>
                     </div>
@@ -90,7 +88,7 @@ const Main = (props) => {
                       </div>
                       <div className="place-card__rating rating">
                         <div className="place-card__stars rating__stars">
-                          <span style={{width: '80%'}}></span>
+                          <span style={{width: `80%`}}></span>
                           <span className="visually-hidden">Rating</span>
                         </div>
                       </div>
@@ -111,6 +109,17 @@ const Main = (props) => {
       </main>
     </React.Fragment>
   );
+};
+
+Main.propTypes = {
+  countOffers: PropTypes.number.isRequired,
+
+  offers: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired
+      })
+  ).isRequired,
 };
 
 export default Main;
