@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from '../main/main.jsx';
-import types from './../types/types.js';
+import types from './../main/types.js';
 
 const App = ({countOffers, offers}) => {
   return (
