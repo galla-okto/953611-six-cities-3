@@ -1,7 +1,7 @@
 import React from 'react';
 import types from './types.js';
 
-const Main = ({countOffers, offers}) => {
+const Main = ({countOffers, offers, onPlaceCardNameLinkClick}) => {
   const createOffers = () =>
     offers.map((offer, index) => (
       <article className="cities__place-card place-card" key={index}>
@@ -33,7 +33,7 @@ const Main = ({countOffers, offers}) => {
             </div>
           </div>
           <h2 className="place-card__name">
-            <a href="#">{offer.title}</a>
+            <a href="#" onClick={onPlaceCardNameLinkClick}>{offer}</a>
           </h2>
           <p className="place-card__type">Apartment</p>
         </div>

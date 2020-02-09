@@ -164,7 +164,7 @@ exports[`<Main /> should render offers 1`] = `
           <b
             className="places__found"
           >
-            111
+            4
              places to stay in Amsterdam
           </b>
           <form
@@ -314,7 +314,10 @@ exports[`<Main /> should render offers 1`] = `
                 >
                   <a
                     href="#"
-                  />
+                    onClick={[Function]}
+                  >
+                    Noisy
+                  </a>
                 </h2>
                 <p
                   className="place-card__type"
@@ -413,7 +416,10 @@ exports[`<Main /> should render offers 1`] = `
                 >
                   <a
                     href="#"
-                  />
+                    onClick={[Function]}
+                  >
+                    Warmer
+                  </a>
                 </h2>
                 <p
                   className="place-card__type"
@@ -512,7 +518,10 @@ exports[`<Main /> should render offers 1`] = `
                 >
                   <a
                     href="#"
-                  />
+                    onClick={[Function]}
+                  >
+                    Ice
+                  </a>
                 </h2>
                 <p
                   className="place-card__type"

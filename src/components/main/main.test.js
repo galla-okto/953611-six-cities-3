@@ -10,7 +10,11 @@ const offers = [
 
 it(`<Main /> should render offers`, () => {
   const tree = renderer
-    .create(<Main countOffers={111} offers={offers}/>)
+    .create(<Main
+      countOffers={4}
+      offers={offers}
+      onPlaceCardNameLinkClick={() => {}}
+    />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

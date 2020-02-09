@@ -10,7 +10,10 @@ const offers = [
 
 it(`<App /> should render count of offers and offers`, () => {
   const tree = renderer
-    .create(<App countOffers={311} offers={offers}/>)
+    .create(<App
+      countOffers={3}
+      offers={offers}
+    />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();
