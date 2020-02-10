@@ -13,7 +13,7 @@ it(`<Main /> should render offers`, () => {
     .create(<Main
       countOffers={4}
       offers={offers}
-      onPlaceCardNameLinkClick={() => {}}
+      onPlaceCardNameClick={() => {}}
     />)
     .toJSON();
 

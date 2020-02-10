@@ -8,25 +8,23 @@ Enzyme.configure({
 });
 
 const offers = [
-  `Lux`,
-  `Econom`,
-  `VIP`
+  `Lux`
 ];
 
 it(`Should card's name be pressed`, () => {
-  const onPlaceCardNameLinkClick = jest.fn();
+  const onPlaceCardNameClick = jest.fn();
 
   const main = shallow(
       <Main
         countOffers={5}
         offers={offers}
-        onPlaceCardNameLinkClick={onPlaceCardNameLinkClick}
+        onPlaceCardNameClick={onPlaceCardNameClick}
       />
   );
 
-  const mainLink = main.find(`.place-card__name a`);
+  const mainLink = main.find(`.place-card__name`);
 
   mainLink.props().onClick();
 
-  expect(onPlaceCardNameLinkClick.mock.calls.length).toBe(1);
+  expect(onPlaceCardNameClick.mock.calls.length).toBe(1);
 });

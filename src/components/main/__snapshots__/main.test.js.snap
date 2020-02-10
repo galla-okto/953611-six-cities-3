@@ -311,10 +311,10 @@ exports[`<Main /> should render offers 1`] = `
                 </div>
                 <h2
                   className="place-card__name"
+                  onClick={[Function]}
                 >
                   <a
                     href="#"
-                    onClick={[Function]}
                   >
                     Noisy
                   </a>
@@ -413,10 +413,10 @@ exports[`<Main /> should render offers 1`] = `
                 </div>
                 <h2
                   className="place-card__name"
+                  onClick={[Function]}
                 >
                   <a
                     href="#"
-                    onClick={[Function]}
                   >
                     Warmer
                   </a>
@@ -515,10 +515,10 @@ exports[`<Main /> should render offers 1`] = `
                 </div>
                 <h2
                   className="place-card__name"
+                  onClick={[Function]}
                 >
                   <a
                     href="#"
-                    onClick={[Function]}
                   >
                     Ice
                   </a>

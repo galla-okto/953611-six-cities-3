@@ -2,14 +2,14 @@ import React from 'react';
 import Main from '../main/main.jsx';
 import types from './../main/types.js';
 
-const placeCardNameLinkHandler = () => {};
+const placeCardNameHandler = () => {};
 
 const App = ({countOffers, offers}) => {
   return (
     <Main
       countOffers={countOffers}
       offers={offers}
-      onPlaceCardNameLinkClick={placeCardNameLinkHandler}
+      onPlaceCardNameClick={placeCardNameHandler}
     />
   );
 };
