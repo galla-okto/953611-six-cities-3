@@ -5,17 +5,22 @@ import PlaceCard from "./../place-card/place-card.jsx";
 class PlaceList extends PureComponent {
   constructor(props) {
     super(props);
+
+    this.state = {
+      activeCard: null,
+    };
+  }
+
+  onHover(card) {
+    this.setState.state = {activeCard: card};
   }
 
   render() {
     const {offers} = this.props;
 
-    const createOffers = () =>
-      offers.map((offer, index) => (<PlaceCard offer={offer} key={index}/>));
-
     return (
       <>
-      {createOffers(offers)}
+      {offers.map((offer, index) => (<PlaceCard offer={offer} key={index} onHover={this.onHover}/>))}
       </>
     );
   }

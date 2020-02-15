@@ -7,12 +7,12 @@ class PlaceCard extends PureComponent {
   }
 
   render() {
-    const {card, onHover} = this.props;
-    const {label, imageSrc, price, rating, name, type} = card;
+    const {offer, onHover} = this.props;
+    const {label, imageSrc, price, rating, name, type} = offer;
 
     return (
       <>
-        <article className="cities__place-card place-card">
+        <article className="cities__place-card place-card" onMouseOver={onHover(offer.name)}>
           {(label ? <div className="place-card__mark">
             <span>Premium</span>
           </div> : ``)}
@@ -52,7 +52,7 @@ class PlaceCard extends PureComponent {
 }
 
 PlaceCard.propTypes = {
-  card: PropTypes.shape({
+  offer: PropTypes.shape({
     label: PropTypes.bool.isRequired,
     imageSrc: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
