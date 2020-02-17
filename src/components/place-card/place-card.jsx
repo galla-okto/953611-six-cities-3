@@ -8,17 +8,18 @@ class PlaceCard extends PureComponent {
 
   render() {
     const {offer, onHover} = this.props;
-    const {label, imageSrc, price, rating, name, type} = offer;
+    const {price, name, type} = offer;
 
+    // onClick={onHover}
     return (
       <>
         <article className="cities__place-card place-card" onMouseOver={onHover(offer.name)}>
-          {(label ? <div className="place-card__mark">
+          <div className="place-card__mark">
             <span>Premium</span>
-          </div> : ``)}
+          </div>
           <div className="cities__image-wrapper place-card__image-wrapper">
             <a href="#">
-              <img className="place-card__image" src={imageSrc} width="260" height="200" alt="Place image"/>
+              <img className="place-card__image" src="img/apartment-01.jpg" width="260" height="200" alt="Place image"/>
             </a>
           </div>
           <div className="place-card__info">
@@ -36,11 +37,11 @@ class PlaceCard extends PureComponent {
             </div>
             <div className="place-card__rating rating">
               <div className="place-card__stars rating__stars">
-                <span style={rating}></span>
+                <span style={{width: `80%`}}></span>
                 <span className="visually-hidden">Rating</span>
               </div>
             </div>
-            <h2 className="place-card__name" onClick={onHover}>
+            <h2 className="place-card__name">
               <a href="#">{name}</a>
             </h2>
             <p className="place-card__type">{type}</p>
@@ -53,14 +54,14 @@ class PlaceCard extends PureComponent {
 
 PlaceCard.propTypes = {
   offer: PropTypes.shape({
-    label: PropTypes.bool.isRequired,
-    imageSrc: PropTypes.string.isRequired,
+    // label: PropTypes.bool.isRequired,
+    // image: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    rating: PropTypes.number.isRequired,
+    // rating: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
   }).isRequired,
-  onHover: PropTypes.func.isRequired,
+  onHover: PropTypes.func,
 };
 
 export default PlaceCard;
