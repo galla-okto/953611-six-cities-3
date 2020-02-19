@@ -8,12 +8,11 @@ class PlaceCard extends PureComponent {
 
   render() {
     const {offer, onHover} = this.props;
-    const {price, name, type} = offer;
+    const {price, name} = offer;
 
-    // onClick={onHover}
     return (
       <>
-        <article className="cities__place-card place-card" onMouseOver={onHover(offer.name)}>
+        <article className="cities__place-card place-card" onMouseOver={onHover}>
           <div className="place-card__mark">
             <span>Premium</span>
           </div>
@@ -44,7 +43,7 @@ class PlaceCard extends PureComponent {
             <h2 className="place-card__name">
               <a href="#">{name}</a>
             </h2>
-            <p className="place-card__type">{type}</p>
+            <p className="place-card__type">Apartment</p>
           </div>
         </article>
       </>
@@ -59,7 +58,7 @@ PlaceCard.propTypes = {
     price: PropTypes.number.isRequired,
     // rating: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    // type: PropTypes.string.isRequired,
   }).isRequired,
   onHover: PropTypes.func,
 };

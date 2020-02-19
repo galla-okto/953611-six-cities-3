@@ -8,7 +8,10 @@ Enzyme.configure({
 });
 
 const offers = [
-  `Lux`
+  {
+    price: 400,
+    name: `Lux`,
+  }
 ];
 
 it(`Should card's name be pressed`, () => {
@@ -17,7 +20,7 @@ it(`Should card's name be pressed`, () => {
   const main = shallow(
       <Main
         countOffers={5}
-        offers={offers}
+        listOffers={offers}
         onPlaceCardNameClick={onPlaceCardNameClick}
       />
   );

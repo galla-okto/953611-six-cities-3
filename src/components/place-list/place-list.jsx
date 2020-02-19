@@ -7,20 +7,20 @@ class PlaceList extends PureComponent {
     super(props);
 
     this.state = {activeCard: null};
-    this.onHover = this.onHover.bind(this);
+    this.handleHover = this.handleHover.bind(this);
   }
 
-  onHover(card) {
-    this.setState({activeCard: card});
+  handleHover(evt) {
+    this.setState({activeCard: evt.target});
   }
 
   render() {
     const {listOffers} = this.props;
 
     return (
-      <React.Fragment>
-        {listOffers.map((offer, index) => (<PlaceCard offer={offer} key={index} onHover={this.onHover}/>))}
-      </React.Fragment>
+      <>
+        {listOffers.map((offer, index) => (<PlaceCard offer={offer} key={index} onHover={this.handleHover}/>))}
+      </>
     );
   }
 }
