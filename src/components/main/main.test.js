@@ -16,7 +16,7 @@ it(`<Main /> should render offers`, () => {
   const tree = renderer
     .create(<Main
       countOffers={4}
-      listOffers={offers}
+      offers={offers}
       onPlaceCardNameClick={() => {}}
     />)
     .toJSON();

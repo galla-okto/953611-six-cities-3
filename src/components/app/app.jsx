@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 
 const placeCardNameHandler = () => {};
 
-const App = ({countOffers, listOffers}) => {
+const App = ({countOffers, offers}) => {
   return (
     <Main
       countOffers={countOffers}
-      listOffers={listOffers}
+      offers={offers}
       onPlaceCardNameClick={placeCardNameHandler}
     />
   );
@@ -16,7 +16,7 @@ const App = ({countOffers, listOffers}) => {
 
 App.propTypes = {
   countOffers: PropTypes.number.isRequired,
-  listOffers: PropTypes.array.isRequired,
+  offers: PropTypes.array.isRequired,
 };
 
 export default App;

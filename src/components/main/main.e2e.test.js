@@ -9,6 +9,7 @@ Enzyme.configure({
 
 const offers = [
   {
+    id: `offer_001`,
     price: 400,
     name: `Lux`,
   }
@@ -20,14 +21,14 @@ it(`Should card's name be pressed`, () => {
   const main = shallow(
       <Main
         countOffers={5}
-        listOffers={offers}
+        offers={offers}
         onPlaceCardNameClick={onPlaceCardNameClick}
       />
   );
 
   const mainLink = main.find(`.place-card__name`);
 
-  mainLink.props().onClick();
+  mainLink.props.onClick();
 
   expect(onPlaceCardNameClick.mock.calls.length).toBe(1);
 });

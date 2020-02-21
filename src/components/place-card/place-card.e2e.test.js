@@ -1,7 +1,7 @@
 import React from "react";
 import {configure, shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import PlaceCard from ".//place-card.jsx";
+import Offer from "./place-card.jsx";
 
 configure({adapter: new Adapter()});
 
@@ -14,17 +14,18 @@ const mock = {
 
 it(`When user move over card`, () => {
   const {offer} = mock;
-  const onHover = jest.fn();
+  const onOfferHover = jest.fn();
+  const onTitleClick = jest.fn();
 
-  const PlaceCardExample = shallow(<PlaceCard
+  const PlaceCardExample = shallow(<Offer
     offer={offer}
-    key={1}
-    onHover={onHover}
+    onOfferHover={onOfferHover}
+    onTitleClick={onTitleClick}
   />);
 
   const card = PlaceCardExample.find(`.place-card`);
 
   card.simulate(`mouseover`, {preventDefault() {}});
 
-  expect(onHover).toHaveBeenCalledTimes(1);
+  expect(onOfferHover).toHaveBeenCalledTimes(1);
 });

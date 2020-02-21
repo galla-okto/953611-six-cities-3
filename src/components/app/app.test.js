@@ -16,7 +16,7 @@ it(`<App /> should render count of offers and offers`, () => {
   const tree = renderer
     .create(<App
       countOffers={3}
-      listOffers={offers}
+      offers={offers}
     />)
     .toJSON();
 

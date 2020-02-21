@@ -2,7 +2,7 @@ import React from 'react';
 import types from './types.js';
 import PlaceList from './../place-list/place-list.jsx';
 
-const Main = ({countOffers, listOffers, onPlaceCardNameClick}) => {
+const Main = ({countOffers, offers, onPlaceCardNameClick}) => {
   return (
     <>
       <div className="page page--gray page--main">
@@ -87,9 +87,7 @@ const Main = ({countOffers, listOffers, onPlaceCardNameClick}) => {
                     <li className="places__option" tabIndex="0">Top rated first</li>
                   </ul>
                 </form>
-                <div className="cities__places-list places__list tabs__content">
-                  <PlaceList listOffers={listOffers} onPlaceCardNameClick={onPlaceCardNameClick}/>
-                </div>
+                <PlaceList listOffers={offers} onPlaceCardNameClick={onPlaceCardNameClick}/>
               </section>
               <div className="cities__right-section">
                 <section className="cities__map map"/>

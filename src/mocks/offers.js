@@ -1,31 +1,19 @@
 export default [
   {
-    // label: true,
-    // image: `img/apartment-01.jpg`,
+    id: `offer_001`,
     price: 120,
-    // rating: `width: 80%`,
     name: `Beautiful & luxurious apartment at great location`,
-    // type: `apartment`,
   }, {
-    // label: false,
-    // image: `img/apartment-01.jpg`,
+    id: `offer_002`,
     price: 80,
-    // rating: `width: 80%`,
     name: `Wood and stone place`,
-    // type: `private room`,
   }, {
-    // label: false,
-    // image: `img/apartment-01.jpg`,
+    id: `offer_003`,
     price: 132,
-    // rating: `width: 80%`,
     name: `Canal View Prinsengracht`,
-    // type: `apartment`,
   }, {
-    // label: false,
-    // image: `img/apartment-01.jpg`,
+    id: `offer_004`,
     price: 180,
-    // rating: `width: 100%`,
     name: `Nice, cozy, warm big bed apartment`,
-    // type: `apartment`,
   },
 ];
