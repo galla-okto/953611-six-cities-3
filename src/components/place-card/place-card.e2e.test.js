@@ -29,5 +29,4 @@ it(`When user move over card`, () => {
 
   expect(onOfferHover).toHaveBeenCalledTimes(1);
 
-  expect(onOfferHover.mock.calls[0]).toMatchObject(offer);
 });
