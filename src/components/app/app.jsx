@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from '../main/main.jsx';
-import types from './../main/types.js';
+import PropTypes from "prop-types";
 
 const placeCardNameHandler = () => {};
 
@@ -14,6 +14,9 @@ const App = ({countOffers, offers}) => {
   );
 };
 
-App.propTypes = types;
+App.propTypes = {
+  countOffers: PropTypes.number.isRequired,
+  offers: PropTypes.array.isRequired,
+};
 
 export default App;

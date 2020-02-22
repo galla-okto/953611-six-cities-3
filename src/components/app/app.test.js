@@ -3,9 +3,13 @@ import renderer from "react-test-renderer";
 import App from './app.jsx';
 
 const offers = [
-  `Good`,
-  `Better`,
-  `The best`
+  {
+    price: 120,
+    name: `Beautiful & luxurious apartment at great location`,
+  }, {
+    price: 80,
+    name: `Wood and stone place`
+  }
 ];
 
 it(`<App /> should render count of offers and offers`, () => {
