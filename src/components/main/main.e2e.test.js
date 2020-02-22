@@ -1,5 +1,5 @@
 import React from "react";
-import Enzyme, {shallow} from "enzyme";
+import Enzyme, {mount} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import Main from './main.jsx';
 
@@ -18,7 +18,7 @@ const offers = [
 it(`Should card's name be pressed`, () => {
   const onPlaceCardNameClick = jest.fn();
 
-  const main = shallow(
+  const main = mount(
       <Main
         countOffers={5}
         offers={offers}
@@ -28,7 +28,7 @@ it(`Should card's name be pressed`, () => {
 
   const mainLink = main.find(`.place-card__name`);
 
-  mainLink.props.onClick();
+  mainLink.props().onClick();
 
   expect(onPlaceCardNameClick.mock.calls.length).toBe(1);
 });

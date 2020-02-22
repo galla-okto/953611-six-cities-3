@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Offer = (props) => {
-  const {offer, onOfferHover, onTitleClick} = props;
-  const {price, name} = offer;
+  const {offerCard, onOfferHover, onTitleClick} = props;
+  const {price, name} = offerCard;
 
   return (
     <article className="cities__place-card place-card" onMouseOver={onOfferHover}>
@@ -45,7 +45,7 @@ const Offer = (props) => {
 
 
 Offer.propTypes = {
-  offer: PropTypes.shape({
+  offerCard: PropTypes.shape({
     price: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired
   }).isRequired,

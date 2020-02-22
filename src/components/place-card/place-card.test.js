@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PlaceCard from '../place-card/place-card.jsx';
+import Offer from '../place-card/place-card.jsx';
 
-const offer = {
+const offers = {
   offer: {
     price: 400,
     name: `Lux`,
@@ -10,11 +10,13 @@ const offer = {
 };
 
 it(`PlaceCard is rendered correctly`, () => {
+  const {offer} = offers;
+
   const tree = renderer.create((
-    <PlaceCard
-      offer={offer}
+    <Offer
+      offerCard={offer}
       key={1}
-      onHover={() => {}}
+      onOfferHover={() => {}}
     />
   )).toJSON();
 

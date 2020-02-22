@@ -5,7 +5,7 @@ import Offer from "./place-card.jsx";
 
 configure({adapter: new Adapter()});
 
-const mock = {
+const offers = {
   offer: {
     price: 400,
     name: `Lux`,
@@ -13,19 +13,21 @@ const mock = {
 };
 
 it(`When user move over card`, () => {
-  const {offer} = mock;
+  const {offer} = offers;
   const onOfferHover = jest.fn();
   const onTitleClick = jest.fn();
 
-  const PlaceCardExample = shallow(<Offer
-    offer={offer}
+  const offerScreen = shallow(<Offer
+    offerCard={offer}
     onOfferHover={onOfferHover}
     onTitleClick={onTitleClick}
   />);
 
-  const card = PlaceCardExample.find(`.place-card`);
+  const offerCard = offerScreen.find(`.place-card`);
 
-  card.simulate(`mouseover`, {preventDefault() {}});
+  offerCard.simulate(`mouseover`);
 
   expect(onOfferHover).toHaveBeenCalledTimes(1);
+
+  expect(onOfferHover.mock.calls[0]).toMatchObject(offer);
 });
