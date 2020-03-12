@@ -1,0 +1,1 @@
+export const xyAmsterdam = [52.3709553943508, 4.89309666406198];
