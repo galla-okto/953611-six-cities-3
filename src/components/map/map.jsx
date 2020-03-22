@@ -14,7 +14,7 @@ export default class Map extends PureComponent {
     const city = xyAmsterdam;
     const zoomSize = 12;
 
-    if ((this.myRef.current) && (L.baseVal !== undefined)) {
+    if (this.myRef.current) {
       const map = L.map(this.myRef.current, {
         center: city,
         zoom: zoomSize,
