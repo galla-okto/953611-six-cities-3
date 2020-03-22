@@ -47,6 +47,10 @@ export default class Map extends PureComponent {
     }
   }
 
+  componentWillUnmount() {
+    this.myRef = null;
+  }
+
   render() {
     return (
       <div ref={this.myRef} style={{height: `100%`}}>
