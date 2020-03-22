@@ -40,9 +40,11 @@ export default class Map extends PureComponent {
 
       const {listOffers} = this.props;
       listOffers.forEach((element) => {
-        L
-        .marker(element.xy, {icon})
-        .addTo(map);
+        if (element.xy !== undefined) {
+          L
+          .marker(element.xy, {icon})
+          .addTo(map);
+        }
       });
     }
   }
