@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import {xyAmsterdam} from "../../const.js";
+import {xyAmsterdam, zoom, tileLayerAddress, tileLayerOptions, iconMap} from "../../const.js";
 import L from 'leaflet';
 
 export default class Map extends PureComponent {
@@ -12,7 +12,7 @@ export default class Map extends PureComponent {
 
   componentDidMount() {
     const city = xyAmsterdam;
-    const zoomSize = 12;
+    const zoomSize = zoom;
 
     if (this.myRef.current) {
       const map = L.map(this.myRef.current, {
@@ -24,15 +24,10 @@ export default class Map extends PureComponent {
 
       map.setView(city, zoomSize);
 
-      L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png`, {
-        attribution: `&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>`
-      }).addTo(map);
+      L.tileLayer(tileLayerAddress, tileLayerOptions).addTo(map);
 
       const offerCords = xyAmsterdam;
-      const icon = L.icon({
-        iconUrl: `img/pin.svg`,
-        iconSize: [30, 30]
-      });
+      const icon = L.icon(iconMap);
 
       L
         .marker(offerCords, {icon})
@@ -59,7 +54,6 @@ export default class Map extends PureComponent {
       </div>
     );
   }
-
 }
 
 Map.propTypes = {
